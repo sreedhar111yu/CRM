@@ -8,7 +8,7 @@ const SettingSidebar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/settings/profile" className="block py-2 px-4 hover:bg-gray-200 rounded-md">
+            <NavLink to="/profile" className="block py-2 px-4 hover:bg-gray-200 rounded-md">
               Profile
             </NavLink>
           </li>

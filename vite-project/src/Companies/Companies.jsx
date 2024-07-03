@@ -8,7 +8,7 @@ const Companies = () => {
   const [data, setData] = useState([
     {
       name: 'Mark Young',
-      email: 'mark.young@example.com',
+      email: 'google.com',
       company: 'Google',
       phone: '(555) 555-5555',
       creationDate: '2 Jul 2024 - 03:30',
@@ -38,12 +38,12 @@ const Companies = () => {
   const columns = useMemo(
     () => [
       {
-        Header: 'Name',
+        Header: 'Account Owner',
         accessor: 'name',
         Cell: EditableCell,
       },
       {
-        Header: 'Email',
+        Header: 'Url',
         accessor: 'email',
         Cell: EditableCell,
       },
@@ -117,6 +117,8 @@ const Companies = () => {
   };
 
   return (
+    <>
+    <h1 className='bg-slate-100 rounded-md p-3 flex justify-between items-center font-serif uppercase text text-3xl text-blue-600'>Companies</h1>
     <div className="people-page container mx-auto p-4">
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
@@ -202,6 +204,8 @@ const Companies = () => {
         </div>
       )}
     </div>
+    </>
+    
   );
 };
 

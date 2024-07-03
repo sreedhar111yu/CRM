@@ -11,14 +11,15 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { ModeToggle } from '@/components/mode-toggle';
 
 function App() {
+  
   return (
-    <ThemeProvider defaultTheme="white" storageKey="vite-ui-theme">
-      <ModeToggle />
+    <>
+    
       <Router>
         <div className="flex">
           <Sidebar />
           <div className="flex-1 p-4">
-            <h1 className="text-2xl font-bold">Welcome to My CRM</h1>
+            {/* <h1 className="text-2xl font-bold">Welcome to My CRM</h1> */}
             <Routes>
               <Route path="/sign-in" element={<SignInPage />} />
               <Route element={<ProtectedRoute />}>
@@ -28,12 +29,14 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
               </Route>
               {/* <Route path="/" element={<Navigate to="/Co" />} /> */}
-              <Route path="/" element={<Navigate to="/settings/profile" />} />
+              <Route path="/" element={<Navigate to="/profile" />} />
             </Routes>
           </div>
         </div>
       </Router>
-    </ThemeProvider>
+    
+    </>
+    
   );
 }
 
